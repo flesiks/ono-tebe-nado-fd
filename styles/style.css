@@ -1,1 +1,491 @@
 /* место для вашего кода */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    /* три колонки */
+    align-items: center;
+    /* выравнивание по вертикали */
+    padding: 93.16px 0;
+    /* чтобы всё дышало */
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+.logo-black {
+    /* logo */
+
+
+    width: 148px;
+    height: 105px;
+    left: calc(50% - 148px/2 + 2px);
+    top: 92px;
+    margin-right: 184px;
+    margin-left: 36.52px;
+
+}
+
+.oracle {
+
+    /* list_marker */
+
+
+    width: 6px;
+    height: 6px;
+
+    border: 0.5px solid #000000;
+    list-style: circle;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center; justify-content: center;
+}
+
+.navigation {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    width: 390px;
+}
+
+address {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cover {
+    position: relative;
+    /* overlay */
+    width: 1100px;
+    height: 757px;
+    left: 0px;
+    top: 0px;
+
+    background: #000000;
+    background-image: url("/images/cover.jpg");
+}
+
+.cover__title {
+    color: white;
+    font-size: 100px;
+    /* подгони под макет */
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* расстояние между строками */
+    position: relative;
+    /* чтобы не прятался под оверлеем */
+    padding-top: 165px;
+        z-index: 5;
+}
+
+.aligned-text {
+    display: block;
+    /* чтобы каждая строка была отдельным блоком */
+    letter-spacing: 30px;
+    
+}
+
+.aligned-text_left {
+    text-align: left;
+    margin-left: 50px;
+    z-index: 3;
+}
+
+.aligned-text_center {
+    text-align: center;
+}
+
+.aligned-text_right {
+    text-align: right;
+    margin-right: 50px;
+}
+
+.description {
+    display: flex;
+}
+
+.glav{
+    text-decoration: none;
+}
+
+.subline {
+    margin-top: 118px;
+    word-spacing: 17px;
+    color: white;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 50px;
+    z-index: 3;
+text-transform: uppercase;
+
+}
+
+.bet-button {
+    all: unset;
+    display: inline-block;
+
+    padding: 12px 32px;
+    /* делает кнопку широкой и высокой */
+    border: 1px solid white;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+    /* оставь только нужные внешние отступы */
+    margin-top: 106px;
+    margin-left: 107px;
+    z-index: 3;
+    margin-right: 50px;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 27px;
+}
+
+.lots__card-list-item {
+    width: 30%;
+    min-height: 596px;
+    min-width: 334px;
+    background-size: cover;
+    background-position: center;
+    gap: 30px;
+    background-color: #000000;
+}
+
+.about-lots {
+    /* title */
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    /* identical to box height */
+    text-transform: uppercase;
+
+    padding-top: 180px;
+    margin-left: 64px;
+
+    color: #000000;
+
+
+}
+
+.lots-card-with-humans {
+    background-image: url(/images/card-lot-01.jpg);
+
+}
+
+.lots-card-with-books {
+    background-image: url(/images/card-lot-02.jpg);
+}
+
+.lots-card-with-geometry {
+    background-image: url(/images/card-lot-03.jpg);
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* регулируешь затемнение */
+    z-index: 1;
+}
+
+.card-title {
+    /* Фильм режиссёра, который бросил киношколу */
+
+    position: absolute;
+    height: 82px;
+    left: 40px;
+    right: 40px;
+    top: 48px;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 120%;
+    /* or 26px */
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    z-index: 3;
+
+}
+
+.directors-profile-description {
+    /* Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон? */
+
+    position: absolute;
+    height: 144px;
+    left: 40px;
+    right: 40px;
+    bottom: 48px;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 24px */
+
+    color: #FFFFFF;
+
+    z-index: 3;
+}
+
+.about-book {
+    /* Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса? */
+
+    position: absolute;
+    height: 360px;
+    left: 40px;
+    right: 40px;
+    bottom: 48px;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 24px */
+
+    color: #FFFFFF;
+
+    z-index: 3;
+}
+
+.good-picture {
+    /* Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. Никаких полей, лесов, котиков... Сколько бы вы на такое поставили, если бы не знали, что это — одна из революционных работ Кандинского? */
+
+    position: absolute;
+    height: 264px;
+    left: 40px;
+    right: 40px;
+    bottom: 48px;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 24px */
+
+    color: #FFFFFF;
+
+    z-index: 3;
+
+
+}
+
+.more {
+    margin-left: 64px;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+.about {
+    margin-top: 120px;
+}
+
+.container-logo {
+
+    /* Ellipse 10 */
+    width: 240px;
+    height: 240px;
+    left: calc(50% - 240px/2);
+    top: calc(50% - 240px/2);
+
+    background: #000000;
+    border-radius: 50%;
+}
+
+.logo-white {
+    width: 148px;
+    height: 114px;
+    justify-self: center;
+}
+
+.groupe {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 100px;
+    /* гибкий отступ между параграфами */
+    /* description-block */
+left: 0px;
+top: 150px;
+
+
+}
+
+
+.zagalovok{
+    /* Об аукционе */
+
+margin-top: 136px;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 47px;
+/* identical to box height */
+text-transform: uppercase;
+
+color: #000000;
+
+
+}
+
+.about {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 334px 1fr; /* левая колонка = ширина карточки */
+  gap: 25px;
+  align-items: start;
+}
+
+/* ЛОГОТИП */
+.container-logo {
+  width: 240px;
+  height: 240px;
+  background: #000;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto; /* центрируем в колонке */
+}
+
+.logo-white {
+  width: 148px;
+  height: 114px;
+}
+
+/* ПРАВАЯ КОЛОНКА */
+.zagalovok {
+  margin-top: 0;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.groupe {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* гибкий отступ между параграфами */
+}
+
+.links-in-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.messandgers{
+    display: flex;
+    justify-content: space-between;
+    /* socials */
+
+/* Auto layout */
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 48px;
+
+width: 240px;
+height: 48px;
+right: 50px;
+top: 1px;
+
+
+}
+
+footer{
+    display: flex;
+    margin-top: 180px;
+    justify-content: space-between;
+    height: 180px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.overlay{
+    /* overlay */
+
+position: absolute;
+width: 1100px;
+height: 757px;
+left: 0px;
+top: 0px;
+
+background: #000000;
+opacity: 0.6;
+z-index: 2;
+}
+.cover {
+  position: relative;
+  background-image: url("/images/cover.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 757px;
+  width: 100%; /* важно! */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0; /* растягивает overlay на весь cover */
+  background: #000;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.cover__title {
+  position: relative;
+  z-index: 5;
+  color: white;
+  font-size: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 165px;
+}
+
+.description {
+  position: relative;
+  z-index: 5;
+  display: flex;
+}
