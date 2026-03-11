@@ -18,7 +18,6 @@ header {
 
     width: 148px;
     height: 105px;
-    left: calc(50% - 148px/2 + 2px);
     top: 92px;
     margin-right: 184px;
     margin-left: 36.52px;
@@ -26,10 +25,7 @@ header {
 }
 
 .oracle {
-
     /* list_marker */
-
-
     width: 6px;
     height: 6px;
 
@@ -57,12 +53,10 @@ address {
     position: relative;
     /* overlay */
     width: 1100px;
-    height: 757px;
-    left: 0px;
-    top: 0px;
+    min-height: 757px;
 
     background: #000000;
-    background-image: url("/images/cover.jpg");
+    background-image: url("./images/cover.jpg");
 }
 
 .cover__title {
@@ -115,7 +109,7 @@ address {
     margin-top: 118px;
     word-spacing: 17px;
     color: white;
-    font-family: 'Raleway';
+    font-family: 'Raleway' , 'sans-serif';
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -175,7 +169,7 @@ li {
 .about-lots {
     /* title */
 
-    font-family: 'Raleway';
+    font-family: 'Raleway','sans-serif';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -192,28 +186,35 @@ li {
 }
 
 .lots-card-with-humans {
-    background-image: url(/images/card-lot-01.jpg);
+    background-image: url(../images/card-lot-01.jpg);
 
 }
 
 .lots-card-with-books {
-    background-image: url(/images/card-lot-02.jpg);
+    background-image: url(../images/card-lot-02.jpg);
 }
 
 .lots-card-with-geometry {
-    background-image: url(/images/card-lot-03.jpg);
+    background-image: url(../images/card-lot-03.jpg);
 }
 
 .card {
     position: relative;
     height: 100%;
     z-index: 2;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 60px;
+
+  height: 100%;
+  position: relative;
 }
 
-.card-overlay {
+.overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     /* регулируешь затемнение */
     z-index: 1;
 }
@@ -221,13 +222,13 @@ li {
 .card-title {
     /* Фильм режиссёра, который бросил киношколу */
 
-    position: absolute;
-    height: 82px;
+    position: relative;
+    min-height: 82px;
     left: 40px;
     right: 40px;
     top: 48px;
 
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'sans-serif';
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -243,13 +244,13 @@ li {
 .directors-profile-description {
     /* Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон? */
 
-    position: absolute;
-    height: 144px;
+    position: relative;
+    min-height: 144px;
     left: 40px;
     right: 40px;
     bottom: 48px;
 
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'sans-serif';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -264,13 +265,12 @@ li {
 .about-book {
     /* Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса? */
 
-    position: absolute;
-    height: 360px;
+    position: relative;
     left: 40px;
     right: 40px;
     bottom: 48px;
 
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'sans-serif';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -291,7 +291,7 @@ li {
     right: 40px;
     bottom: 48px;
 
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'sans-serif';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -306,8 +306,10 @@ li {
 }
 
 .more {
+    display: inline-block;
     margin-left: 64px;
-    margin-top: 30px;
+    padding-top: 30px;
+
     text-decoration: underline;
 }
 
@@ -340,18 +342,15 @@ li {
     margin-top: 100px;
     /* гибкий отступ между параграфами */
     /* description-block */
-left: 0px;
-top: 150px;
-
-
+    top: 150px;
 }
 
 
-.zagalovok{
+.heading{
     /* Об аукционе */
 
 margin-top: 136px;
-font-family: 'Raleway';
+font-family: 'Raleway', 'sans-serif';
 font-style: normal;
 font-weight: 700;
 font-size: 40px;
@@ -392,9 +391,9 @@ color: #000000;
 }
 
 /* ПРАВАЯ КОЛОНКА */
-.zagalovok {
+.heading {
   margin-top: 0;
-  font-family: 'Raleway';
+  font-family: 'Raleway', 'sans-serif';
   font-weight: 700;
   font-size: 40px;
   line-height: 47px;
@@ -425,7 +424,6 @@ padding: 0px;
 gap: 48px;
 
 width: 240px;
-height: 48px;
 right: 50px;
 top: 1px;
 
@@ -436,24 +434,11 @@ footer{
     display: flex;
     margin-top: 180px;
     justify-content: space-between;
-    height: 180px;
     margin-left: 50px;
     margin-right: 50px;
 }
 
-.overlay{
-    /* overlay */
 
-position: absolute;
-width: 1100px;
-height: 757px;
-left: 0px;
-top: 0px;
-
-background: #000000;
-opacity: 0.6;
-z-index: 2;
-}
 .cover {
   position: relative;
   background-image: url("/images/cover.jpg");
@@ -461,14 +446,6 @@ z-index: 2;
   background-position: center;
   height: 757px;
   width: 100%; /* важно! */
-}
-
-.overlay {
-  position: absolute;
-  inset: 0; /* растягивает overlay на весь cover */
-  background: #000;
-  opacity: 0.6;
-  z-index: 1;
 }
 
 .cover__title {
@@ -489,3 +466,42 @@ z-index: 2;
   z-index: 5;
   display: flex;
 }
+
+.card-description{
+    display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #FFFFFF;
+
+    z-index: 3;
+}
+
+.menu {
+  display: flex;
+  gap: 13px;
+  list-style: none;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.menu li:not(:first-child)::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border: 0.5px solid #000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+
